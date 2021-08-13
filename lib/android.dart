@@ -11,26 +11,26 @@ class _AndroidDrawableTemplate {
 @visibleForTesting
 final List<_AndroidDrawableTemplate> androidSplashImages =
     <_AndroidDrawableTemplate>[
-  _AndroidDrawableTemplate(directoryName: 'drawable-mdpi', pixelDensity: 1),
-  _AndroidDrawableTemplate(directoryName: 'drawable-hdpi', pixelDensity: 1.5),
-  _AndroidDrawableTemplate(directoryName: 'drawable-xhdpi', pixelDensity: 2),
-  _AndroidDrawableTemplate(directoryName: 'drawable-xxhdpi', pixelDensity: 3),
-  _AndroidDrawableTemplate(directoryName: 'drawable-xxxhdpi', pixelDensity: 4),
+  // _AndroidDrawableTemplate(directoryName: 'drawable-mdpi', pixelDensity: 1),
+  // _AndroidDrawableTemplate(directoryName: 'drawable-hdpi', pixelDensity: 1.5),
+  _AndroidDrawableTemplate(directoryName: 'drawable-xhdpi', pixelDensity: 3),
+  // _AndroidDrawableTemplate(directoryName: 'drawable-xxhdpi', pixelDensity: 3),
+  // _AndroidDrawableTemplate(directoryName: 'drawable-xxxhdpi', pixelDensity: 4),
 ];
 
 @visibleForTesting
 final List<_AndroidDrawableTemplate> androidSplashImagesDark =
     <_AndroidDrawableTemplate>[
+  // _AndroidDrawableTemplate(
+  // directoryName: 'drawable-night-mdpi', pixelDensity: 1),
+  // _AndroidDrawableTemplate(
+  // directoryName: 'drawable-night-hdpi', pixelDensity: 1.5),
   _AndroidDrawableTemplate(
-      directoryName: 'drawable-night-mdpi', pixelDensity: 1),
-  _AndroidDrawableTemplate(
-      directoryName: 'drawable-night-hdpi', pixelDensity: 1.5),
-  _AndroidDrawableTemplate(
-      directoryName: 'drawable-night-xhdpi', pixelDensity: 2),
-  _AndroidDrawableTemplate(
-      directoryName: 'drawable-night-xxhdpi', pixelDensity: 3),
-  _AndroidDrawableTemplate(
-      directoryName: 'drawable-night-xxxhdpi', pixelDensity: 4),
+      directoryName: 'drawable-night-xhdpi', pixelDensity: 3),
+  // _AndroidDrawableTemplate(
+  // directoryName: 'drawable-night-xxhdpi', pixelDensity: 3),
+  // _AndroidDrawableTemplate(
+  // directoryName: 'drawable-night-xxxhdpi', pixelDensity: 4),
 ];
 
 /// Create Android splash screen
@@ -149,8 +149,8 @@ void _saveImageAndroid(
     {required _AndroidDrawableTemplate template, required Image image}) {
   var newFile = copyResize(
     image,
-    width: image.width * template.pixelDensity ~/ 4,
-    height: image.height * template.pixelDensity ~/ 4,
+    width: image.width * template.pixelDensity ~/ 3,
+    height: image.height * template.pixelDensity ~/ 3,
     interpolation: Interpolation.linear,
   );
 

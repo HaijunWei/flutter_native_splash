@@ -13,7 +13,7 @@ final List<_IosLaunchImageTemplate> iOSSplashImages = <_IosLaunchImageTemplate>[
   _IosLaunchImageTemplate(fileName: 'LaunchImage@2x.png', pixelDensity: 2),
   _IosLaunchImageTemplate(
       fileName: 'LaunchImage@3x.png',
-      pixelDensity: 3), // original image must be @4x
+      pixelDensity: 3), // original image must be @3x
 ];
 
 final List<_IosLaunchImageTemplate> iOSSplashImagesDark =
@@ -104,8 +104,8 @@ void _saveImageiOS(
     {required _IosLaunchImageTemplate template, required Image image}) {
   var newFile = copyResize(
     image,
-    width: image.width * template.pixelDensity ~/ 4,
-    height: image.height * template.pixelDensity ~/ 4,
+    width: image.width * template.pixelDensity ~/ 3,
+    height: image.height * template.pixelDensity ~/ 3,
     interpolation: Interpolation.linear,
   );
 
